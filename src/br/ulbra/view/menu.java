@@ -28,18 +28,23 @@ public class menu extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenuItem1 = new javax.swing.JMenuItem();
+        jSair = new javax.swing.JButton();
         jPainel = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jSair1 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jCadastro = new javax.swing.JMenuItem();
         jSobre = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
+
+        jSair.setBackground(new java.awt.Color(255, 51, 51));
+        jSair.setText("SAIR");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,20 +61,27 @@ public class menu extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/3586362_checklist_document_list_paper_icon.png"))); // NOI18N
 
+        jSair1.setBackground(new java.awt.Color(255, 51, 51));
+        jSair1.setText("SAIR");
+        jSair1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jSair1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPainelLayout = new javax.swing.GroupLayout(jPainel);
         jPainel.setLayout(jPainelLayout);
         jPainelLayout.setHorizontalGroup(
             jPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPainelLayout.createSequentialGroup()
                 .addGap(212, 212, 212)
-                .addComponent(jLabel5)
                 .addGroup(jPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPainelLayout.createSequentialGroup()
+                        .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel2)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPainelLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel1)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPainelLayout.createSequentialGroup()
@@ -80,7 +92,10 @@ public class menu extends javax.swing.JFrame {
                         .addGap(86, 86, 86))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPainelLayout.createSequentialGroup()
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(99, 99, 99))))
+                        .addGap(99, 99, 99))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPainelLayout.createSequentialGroup()
+                        .addComponent(jSair1)
+                        .addGap(33, 33, 33))))
         );
         jPainelLayout.setVerticalGroup(
             jPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -98,7 +113,9 @@ public class menu extends javax.swing.JFrame {
                     .addGroup(jPainelLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel1)))
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addComponent(jSair1)
+                .addGap(38, 38, 38))
         );
 
         jMenu1.setText("Opções");
@@ -149,6 +166,10 @@ public class menu extends javax.swing.JFrame {
             this.dispose();
     }//GEN-LAST:event_jSobreActionPerformed
 
+    private void jSair1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSair1ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jSair1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -195,6 +216,8 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPainel;
+    private javax.swing.JButton jSair;
+    private javax.swing.JButton jSair1;
     private javax.swing.JMenuItem jSobre;
     // End of variables declaration//GEN-END:variables
 }
