@@ -7,10 +7,10 @@ import javax.swing.JTextArea;
 
 public class trabalho {
 
-    public ArrayList Lista;
+    public ArrayList<Integer> Lista;
 
     public trabalho() {
-        Lista = new ArrayList();
+        Lista = new ArrayList<>();
     }
 
     public trabalho(JTextArea Arlista1) {
@@ -27,29 +27,27 @@ public class trabalho {
     }
     //adicionar
 
-    public void adicionar(String item) {
-        if (NumInt(item)) {
-            Lista.add(item);
-            JOptionPane.showMessageDialog(null, "Número salvo");
-        } else {
-
-            JOptionPane.showMessageDialog(null, "Número inválido");
-        }
+   public void adicionar(String item) {
+    if (NumInt(item)) {
+        Lista.add(Integer.parseInt(item)); // Converta para inteiro antes de adicionar
+        JOptionPane.showMessageDialog(null, "Número salvo");
+    } else {
+        JOptionPane.showMessageDialog(null, "Número inválido");
     }
+}
     //listar
 
     public String listar() {
-        String res = "";
-        if (!Lista.isEmpty()) {
-            for (int i = 0; i < Lista.size(); i++) {
-                res += (i + 1) + " = " + Lista.get(i) + "\n";
-            }
-        } else {
-
-            res = "Lista Vazia";
+    String res = "";
+    if (!Lista.isEmpty()) {
+        for (int i = 0; i < Lista.size(); i++) {
+            res += (i + 1) + " = " + Lista.get(i).toString() + "\n"; // Converta para string ao exibir
         }
-        return res;
+    } else {
+        res = "Lista Vazia";
     }
+    return res;
+}
 // Remover um número com base em seu índice na lista.
 
     public void excluir(int indice) {
@@ -69,24 +67,31 @@ public class trabalho {
     }
     // atualizar um número existente com base em seu índice na lista.
 
-    public void adicionarNumero(String item) {
-        Lista.add(item);
-        JOptionPane.showMessageDialog(null, "Salvo com sucesso!");
+   public void adicionarNumero(String item) {
+    if (NumInt(item)) {
+        Lista.add(Integer.parseInt(item)); // Converta para inteiro antes de adicionar
+        JOptionPane.showMessageDialog(null, "Número salvo");
+    } else {
+        JOptionPane.showMessageDialog(null, "Número inválido");
     }
+}
 
     public void atualizar(int indice, String novoItem) {
-        if (!Lista.isEmpty()) {
-            if (indice > 0 && indice <= Lista.size()) {
-                Lista.set(indice - 1, novoItem);
-                JOptionPane.showMessageDialog(null, " Atualizado com sucesso! ");
-
+    if (!Lista.isEmpty()) {
+        if (indice > 0 && indice <= Lista.size()) {
+            if (NumInt(novoItem)) {
+                Lista.set(indice - 1, Integer.parseInt(novoItem)); // Converta para inteiro antes de atualizar
+                JOptionPane.showMessageDialog(null, "Atualizado com sucesso!");
             } else {
-                JOptionPane.showMessageDialog(null, " Índice inválido!");
+                JOptionPane.showMessageDialog(null, "Novo item inválido");
             }
         } else {
-            JOptionPane.showMessageDialog(null, " Impossível atualizar, a lista está vazia!");
+            JOptionPane.showMessageDialog(null, "Índice inválido!");
         }
+    } else {
+        JOptionPane.showMessageDialog(null, "Impossível atualizar, a lista está vazia!");
     }
+}
 
     // Ordenar a lista
     public void ordenarLista(boolean crescente) {
