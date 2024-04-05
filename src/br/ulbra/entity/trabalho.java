@@ -14,7 +14,7 @@ public class trabalho {
     }
 
     public trabalho(JTextArea Arlista1) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     private boolean NumInt(String str) {
@@ -29,7 +29,7 @@ public class trabalho {
 
    public void adicionar(String item) {
     if (NumInt(item)) {
-        Lista.add(Integer.parseInt(item)); // Converta para inteiro antes de adicionar
+        Lista.add(Integer.parseInt(item)); 
         JOptionPane.showMessageDialog(null, "Número salvo");
     } else {
         JOptionPane.showMessageDialog(null, "Número inválido");
@@ -69,7 +69,7 @@ public class trabalho {
 
    public void adicionarNumero(String item) {
     if (NumInt(item)) {
-        Lista.add(Integer.parseInt(item)); // Converta para inteiro antes de adicionar
+        Lista.add(Integer.parseInt(item)); 
         JOptionPane.showMessageDialog(null, "Número salvo");
     } else {
         JOptionPane.showMessageDialog(null, "Número inválido");
@@ -80,7 +80,7 @@ public class trabalho {
     if (!Lista.isEmpty()) {
         if (indice > 0 && indice <= Lista.size()) {
             if (NumInt(novoItem)) {
-                Lista.set(indice - 1, Integer.parseInt(novoItem)); // Converta para inteiro antes de atualizar
+                Lista.set(indice - 1, Integer.parseInt(novoItem)); 
                 JOptionPane.showMessageDialog(null, "Atualizado com sucesso!");
             } else {
                 JOptionPane.showMessageDialog(null, "Novo item inválido");
